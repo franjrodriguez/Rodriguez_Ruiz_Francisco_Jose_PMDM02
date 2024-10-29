@@ -15,6 +15,6 @@ public class CharacterViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind (CharacterData characterData) {
-        binding.nameCharacter.setText(characterData.getNameCharacter();
+
     }
 }
