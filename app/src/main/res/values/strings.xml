@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Rodriguez_Ruiz_Francisco_Jose_PMDM02</string>
+    <string name="title_app">Los Amigos de Mario</string>
 
     <string-array name="super_mario_characters">
         <item>Mario</item>
@@ -72,4 +73,6 @@
         <item>El rival y némesis de Luigi, Waluigi es conocido por su personalidad maliciosa y su constante búsqueda de reconocimiento. Aunque nunca ha sido el antagonista principal, es un personaje recurrente en los juegos de deportes y fiestas.</item>
         <item>Un poderoso hechicero que sirve a Bowser y a menudo aparece como un obstáculo importante para Mario y sus amigos. Kamek usa magia para dificultar las misiones de Mario y puede transformar a los enemigos en formas más peligrosas.</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

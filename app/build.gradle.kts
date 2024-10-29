@@ -5,6 +5,7 @@ plugins {
 android {
     namespace = "com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02"
     compileSdk = 34
+
     buildFeatures {
         viewBinding = true
         dataBinding = true
@@ -41,6 +42,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.3")
+    implementation(libs.navigation.fragment)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

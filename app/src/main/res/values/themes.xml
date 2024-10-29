@@ -1,7 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Rodriguez_Ruiz_Francisco_Jose_PMDM02" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Base.Theme.Rodriguez_Ruiz_Francisco_Jose_PMDM02" parent="Theme.AppCompat.Light">
         <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#E4000F</item>
+        <item name="colorPrimaryVariant">#B2000A</item>
+        <item name="colorSecondary">#00A2EE</item>
+        <item name="colorSecondaryVariant">#0079C2</item>
+        <item name="android:colorBackground">#F0E68C</item>
+        <item name="colorSurface">#E0D67C</item>
+        <item name="colorError">#FFD700</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#FFFFFF</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
