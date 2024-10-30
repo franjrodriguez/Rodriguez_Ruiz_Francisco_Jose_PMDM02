@@ -1,78 +1,96 @@
 <resources>
     <string name="app_name">Rodriguez_Ruiz_Francisco_Jose_PMDM02</string>
     <string name="title_app">Los Amigos de Mario</string>
-
-    <string-array name="super_mario_characters">
-        <item>Mario</item>
-        <item>Luigi</item>
-        <item>Princesa Peach</item>
-        <item>Bowser</item>
-        <item>Yoshi</item>
-        <item>Toad</item>
-        <item>Wario</item>
-        <item>Donkey Kong</item>
-        <item>Koopa Troopa</item>
-        <item>Goomba</item>
-        <item>Princesa Daisy</item>
-        <item>Rosalina</item>
-        <item>Toadette</item>
-        <item>Waluigi</item>
-        <item>Kamek</item>
-    </string-array>
-
-    <string-array name="super_mario_titles">
-        <item>Héroe del Reino Champiñón</item>
-        <item>Hermano valiente de Mario</item>
-        <item>Princesa del Reino Champiñón</item>
-        <item>Rey de los Koopas</item>
-        <item>Aliado dinosaurio fiel de Mario</item>
-        <item>Sirviente de la Princesa Peach</item>
-        <item>Rival codicioso de Mario</item>
-        <item>Rey de la jungla</item>
-        <item>Soldado tortuga de Bowser</item>
-        <item>Enemigo común del Reino Champiñón</item>
-        <item>Princesa del Reino Sarasaland</item>
-        <item>Guardián de las estrellas</item>
-        <item>Aventurera y amiga de Toad</item>
-        <item>Rival celoso de Luigi</item>
-        <item>Hechicero sirviente de Bowser</item>
-    </string-array>
-
-    <string-array name="caracteristicas_personajes">
-        <item>Mario, valiente, héroe principal, gran salto, fontanero</item>
-        <item>Luigi, tímido, hermano de Mario, gran salto, fiel</item>
-        <item>Princesa Peach, elegante, gobernante del Reino Champiñón, amable, secuestrada con frecuencia</item>
-        <item>Bowser, malvado, rey de los Koopas, gran fuerza, obsesionado con Peach</item>
-        <item>Yoshi, fiel, dinosaurio, lengua larga, transporta personajes</item>
-        <item>Toad, servicial, habitante del Reino Champiñón, valiente, rápido</item>
-        <item>Wario, codicioso, rival de Mario, fuerte, busca riquezas</item>
-        <item>Donkey Kong, poderoso, amante de los plátanos, gran fuerza, protector de su isla</item>
-        <item>Koopa Troopa, enemigo clásico, con caparazón, puede ser lanzado, miembro del ejército de Bowser</item>
-        <item>Goomba, pequeño, enemigo común, sin brazos, fácil de derrotar</item>
-        <item>Princesa Daisy, energética, gobernante del Reino Sarasaland, alegre, amiga de Peach</item>
-        <item>Rosalina, misteriosa, guardiana del cosmos, serena, cuida a los Lumas</item>
-        <item>Toadette, alegre, amiga de Toad, aventurera, ayuda a los héroes</item>
-        <item>Waluigi, vengativo, compañero de Wario, tramposo, ágil</item>
-        <item>Kamek, mago, aliado de Bowser, usa magia, astuto</item>
-    </string-array>
-
-    <string-array name="super_mario_descriptions">
-        <item>El protagonista de la saga, un plomero valiente y simpático que siempre está listo para salvar el Reino Champiñón y rescatar a la Princesa Peach de las garras de Bowser.</item>
-        <item>El hermano menor de Mario, conocido por su lealtad y coraje, aunque suele ser más tímido. A menudo acompaña a Mario en sus aventuras para salvar el Reino Champiñón.</item>
-        <item>La gobernante del Reino Champiñón que es constantemente secuestrada por Bowser. Peach es amable, elegante, pero también ha demostrado ser una luchadora en diversas ocasiones.</item>
-        <item>El principal antagonista de la serie, Bowser es el temido rey de los Koopas, obsesionado con conquistar el Reino Champiñón y casarse con la Princesa Peach.</item>
-        <item>El fiel compañero de Mario, un dinosaurio verde que usa su lengua para atrapar enemigos. Yoshi ayuda a Mario en muchas de sus misiones a lo largo de la saga.</item>
-        <item>Un habitante del Reino Champiñón, leal sirviente de la Princesa Peach. A menudo ayuda a Mario brindándole consejos y asistencia en sus aventuras.</item>
-        <item>Un antiguo enemigo de Mario, pero ahora más conocido por su personalidad codiciosa y su búsqueda constante de riquezas y poder. Wario es rival de Mario pero ocasionalmente también se embarca en sus propias aventuras.</item>
-        <item>El rey de la jungla y aliado ocasional de Mario. Donkey Kong tiene una gran fuerza y es conocido por su amor por los plátanos y su enemistad con otros personajes, como King K. Rool.</item>
-        <item>Uno de los soldados del ejército de Bowser, Koopa Troopa es una tortuga que aparece como enemigo común en los juegos de Mario. A veces también puede ser un aliado o personaje jugable en otras entregas.</item>
-        <item>Un pequeño enemigo del Reino Champiñón con forma de hongo, que suele ser el primer oponente que Mario enfrenta en muchos de sus juegos. A pesar de su tamaño, puede ser una amenaza en grandes cantidades.</item>
-        <item>La princesa del Reino Sarasaland, una amiga cercana de la Princesa Peach. Daisy es conocida por su personalidad enérgica y competitiva, a menudo participando en deportes y carreras.</item>
-        <item>Una poderosa guardiana de las estrellas y madre de los Lumas. Rosalina juega un papel importante en la protección del cosmos y es un personaje misterioso con gran sabiduría.</item>
-        <item>Una aventurera y amiga de Toad que comparte su entusiasmo por la exploración. Toadette ha demostrado ser una compañera valiente en varias misiones y aparece en numerosos juegos.</item>
-        <item>El rival y némesis de Luigi, Waluigi es conocido por su personalidad maliciosa y su constante búsqueda de reconocimiento. Aunque nunca ha sido el antagonista principal, es un personaje recurrente en los juegos de deportes y fiestas.</item>
-        <item>Un poderoso hechicero que sirve a Bowser y a menudo aparece como un obstáculo importante para Mario y sus amigos. Kamek usa magia para dificultar las misiones de Mario y puede transformar a los enemigos en formas más peligrosas.</item>
-    </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Mario -->
+    <string name="mario_name">Mario</string>
+    <string name="mario_description">El héroe principal, un fontanero italiano.</string>
+    <string name="mario_skills">Salto, poder de fuego</string>
+    <string name="mario_detail">Mario es conocido por su valentía, rescatando a la Princesa Peach y enfrentándose a Bowser.</string>
+
+    <!-- Luigi -->
+    <string name="luigi_name">Luigi</string>
+    <string name="luigi_description">El hermano de Mario, siempre dispuesto a ayudar.</string>
+    <string name="luigi_skills">Salto alto, poder de fuego</string>
+    <string name="luigi_detail">Luigi es más tímido que Mario, pero tiene gran destreza y siempre lo apoya.</string>
+
+    <!-- Princess Peach -->
+    <string name="peach_name">Princesa Peach</string>
+    <string name="peach_description">La princesa del Reino Champiñón.</string>
+    <string name="peach_skills">Flotación, magia</string>
+    <string name="peach_detail">Peach es amable, tiene habilidades mágicas, y defiende su reino.</string>
+
+    <!-- Bowser -->
+    <string name="bowser_name">Bowser</string>
+    <string name="bowser_description">El rey de los Koopas y enemigo de Mario.</string>
+    <string name="bowser_skills">Fuerza, resistencia al fuego</string>
+    <string name="bowser_detail">Bowser es feroz y lanza fuego. Constantemente intenta secuestrar a Peach.</string>
+
+    <!-- Yoshi -->
+    <string name="yoshi_name">Yoshi</string>
+    <string name="yoshi_description">Un dinosaurio verde y fiel amigo de Mario.</string>
+    <string name="yoshi_skills">Lengua larga, devorar enemigos</string>
+    <string name="yoshi_detail">Yoshi ayuda a Mario, utilizando su lengua para superar obstáculos.</string>
+
+    <!-- Toad -->
+    <string name="toad_name">Toad</string>
+    <string name="toad_description">Un leal sirviente de la Princesa Peach.</string>
+    <string name="toad_skills">Velocidad, resistencia</string>
+    <string name="toad_detail">Toad es rápido y valiente, siempre protegiendo el castillo de Peach.</string>
+
+    <!-- Wario -->
+    <string name="wario_name">Wario</string>
+    <string name="wario_description">Rival de Mario, ambicioso y fuerte.</string>
+    <string name="wario_skills">Fuerza, resistencia</string>
+    <string name="wario_detail">Wario es codicioso, busca poder y riquezas, aunque a veces ayuda.</string>
+
+    <!-- Donkey Kong -->
+    <string name="donkey_kong_name">Donkey Kong</string>
+    <string name="donkey_kong_description">Un fuerte gorila y aliado ocasional de Mario.</string>
+    <string name="donkey_kong_skills">Fuerza bruta</string>
+    <string name="donkey_kong_detail">Donkey Kong protege su isla y familia de amenazas externas.</string>
+
+    <!-- Koopa Troopa -->
+    <string name="koopa_troopa_name">Koopa Troopa</string>
+    <string name="koopa_troopa_description">Un soldado leal en el ejército de Bowser.</string>
+    <string name="koopa_troopa_skills">Resistencia, puede retirarse en su caparazón</string>
+    <string name="koopa_troopa_detail">Koopa Troopa es valiente y lucha por el reino de Bowser.</string>
+
+    <!-- Goomba -->
+    <string name="goomba_name">Goomba</string>
+    <string name="goomba_description">Un pequeño enemigo en el Reino Champiñón.</string>
+    <string name="goomba_skills">Persistencia</string>
+    <string name="goomba_detail">Goomba es una criatura simple, pero siempre aparece en las aventuras de Mario.</string>
+
+    <!-- Princess Daisy -->
+    <string name="daisy_name">Princesa Daisy</string>
+    <string name="daisy_description">Princesa de Sarasaland.</string>
+    <string name="daisy_skills">Habilidades deportivas</string>
+    <string name="daisy_detail">Daisy es energética, valiente y gran amiga de Peach.</string>
+
+    <!-- Rosalina -->
+    <string name="rosalina_name">Rosalina</string>
+    <string name="rosalina_description">Guardiana de las galaxias y amiga de Mario.</string>
+    <string name="rosalina_skills">Control de gravedad</string>
+    <string name="rosalina_detail">Rosalina vigila el cosmos y ayuda a Mario en aventuras espaciales.</string>
+
+    <!-- Toadette -->
+    <string name="toadette_name">Toadette</string>
+    <string name="toadette_description">Amiga habilidosa de Toad.</string>
+    <string name="toadette_skills">Velocidad y trabajo en equipo</string>
+    <string name="toadette_detail">Toadette es alegre y gran aventurera junto a Toad.</string>
+
+    <!-- Waluigi -->
+    <string name="waluigi_name">Waluigi</string>
+    <string name="waluigi_description">Compañero de Wario, experto en tenis.</string>
+    <string name="waluigi_skills">Habilidad, rivalidad</string>
+    <string name="waluigi_detail">Waluigi es competitivo y siempre busca vencer a Luigi.</string>
+
+    <!-- Kamek -->
+    <string name="kamek_name">Kamek</string>
+    <string name="kamek_description">Mago de confianza de Bowser.</string>
+    <string name="kamek_skills">Magia, teletransportación</string>
+    <string name="kamek_detail">Kamek es astuto y usa su magia para proteger a Bowser.</string>
+
 </resources>
