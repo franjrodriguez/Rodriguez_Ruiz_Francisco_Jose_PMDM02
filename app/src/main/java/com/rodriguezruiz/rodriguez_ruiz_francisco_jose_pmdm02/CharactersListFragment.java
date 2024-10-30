@@ -17,7 +17,7 @@ public class CharactersListFragment extends Fragment {
 
     private FragmentCharactersListBinding binding;
     private ArrayList<CharacterData> character;
-    private GameRecyclerViewAdapter adapter;
+    private CharacterRecyclerViewAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,7 +32,7 @@ public class CharactersListFragment extends Fragment {
 
         loadCharacters();
 
-        adapter = new GameRecyclerViewAdapter(character, getActivity());
+        adapter = new CharacterRecyclerViewAdapter(character, getActivity());
         binding.charactersRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.charactersRecyclerview.setAdapter(adapter);
     }
