@@ -11,8 +11,6 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.ActivityMainBinding;
-import java.util.Arrays;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void userClicked(CharacterData characterData, View view) {
         Bundle bundle = new Bundle();
-        bundle.putInt("image", characterData.getImageCharacter());
+        bundle.putInt("imagedetail", characterData.getImageDetailCharacter());
         bundle.putString("name", characterData.getNameCharacter());
         bundle.putString("description", characterData.getDescriptionCharacter());
         bundle.putString("skills", characterData.getSkillsCharacter());

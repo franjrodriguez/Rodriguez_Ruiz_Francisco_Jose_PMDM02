@@ -2,63 +2,55 @@ package com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CharacterDetailFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.FragmentCharacterDetailBinding;
+
 public class CharacterDetailFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private FragmentCharacterDetailBinding binding;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public CharacterDetailFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CharacterDetailFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CharacterDetailFragment newInstance(String param1, String param2) {
-        CharacterDetailFragment fragment = new CharacterDetailFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        // Inflar el layout para este fragmento
+        binding = FragmentCharacterDetailBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Si hay argumentos los recuperamos
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            int image = getArguments().getInt("imagedetail");
+            String name = getArguments().getString("name");
+            String description = getArguments().getString("description");
+            String detail = getArguments().getString("detail");
+            String skills = getArguments().getString("skills");
+
+            // Asignar los datos a los componentes
+            binding.image.setImageResource(image);
+            binding.name.setText(name);
+            binding.description.setText(description);
+            binding.skills.setText(skills);
         }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_character_detail, container, false);
+    public void onStart() {
+        super.onStart();
+        // Cambia el título del ActionBar
+        if (getActivity() != null) {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.detalle_personaje);
+        }
     }
 }

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Rodriguez_Ruiz_Francisco_Jose_PMDM02</string>
-    <string name="title_app">Los Amigos de Mario</string>
+    <string name="title_app">Personajes de la saga</string>
+    <string name="detalle_personaje">Detalles de Personaje</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Mario -->
