@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02"
-        minSdk = 27
+        minSdk = 31
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -46,6 +46,7 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.8.3")
+    implementation("androidx.core:core-splashscreen:1.0.1")
     implementation(libs.navigation.fragment)
 
     testImplementation(libs.junit)
