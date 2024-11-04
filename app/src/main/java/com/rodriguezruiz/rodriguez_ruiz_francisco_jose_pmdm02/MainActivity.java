@@ -1,6 +1,7 @@
 package com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -14,7 +15,8 @@ import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.Activi
 
 public class MainActivity extends AppCompatActivity {
 
-    private NavController navController;
+    //private NavController navController;
+    NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,19 +32,21 @@ public class MainActivity extends AppCompatActivity {
 
         // Ahora se procede a configurar el controlador de navegacion
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+        //AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController);
 
     }
 
     public void userClicked(CharacterData characterData, View view) {
+        Log.i("franlog","Acabo de entrar en userClicked");
         Bundle bundle = new Bundle();
-        bundle.putInt("imagedetail", characterData.getImageDetailCharacter());
+        bundle.putInt("imageDetail", characterData.getImageDetailCharacter());
         bundle.putString("name", characterData.getNameCharacter());
         bundle.putString("description", characterData.getDescriptionCharacter());
         bundle.putString("skills", characterData.getSkillsCharacter());
         bundle.putString("detail", characterData.getDetailCharacter());
 
+        Log.i("franlog", "Justo antes de navegar al fragment de detalle");
         Navigation.findNavController(view).navigate(R.id.characterDetailFragment, bundle);
     }
 

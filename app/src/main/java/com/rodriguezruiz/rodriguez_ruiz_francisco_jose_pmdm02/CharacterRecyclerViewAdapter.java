@@ -1,6 +1,7 @@
 package com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,15 +37,18 @@ public class CharacterRecyclerViewAdapter extends RecyclerView.Adapter<Character
     public void onBindViewHolder(@NonNull CharacterViewHolder holder, int position) {
         CharacterData currentCharacter = this.characters.get(position);
         holder.bind(currentCharacter);
+
+        // Hace la llamada al evento onClick
+        holder.itemView.setOnClickListener(view->itemClicked(currentCharacter, view));
     }
 
     @Override
     public int getItemCount() {
-
         return characters.size();
     }
 
     private void itemClicked(CharacterData currentCharacter, View view) {
+        Log.i("franlog", "Se ha detectado un itemClicked");
         ((MainActivity) context).userClicked(currentCharacter, view);
     }
 }

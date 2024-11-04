@@ -3,18 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/charactersListFragment">
+    app:startDestination="@id/mainFragment">
 
-    <fragment
-        android:id="@+id/charactersListFragment"
-        android:name="com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.CharactersListFragment"
-        android:label="CharactersListFragment" >
-        <action
-            android:id="@+id/action_charactersListFragment_to_characterDetailFragment"
-            app:destination="@id/characterDetailFragment" />
-    </fragment>
     <fragment
         android:id="@+id/characterDetailFragment"
         android:name="com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.CharacterDetailFragment"
         android:label="CharacterDetailFragment" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.CharactersListFragment"
+        android:label="mainFragment" />
 </navigation>

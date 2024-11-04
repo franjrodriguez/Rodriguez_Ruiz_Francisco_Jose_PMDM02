@@ -1,9 +1,5 @@
 package com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02;
 
-import android.view.View;
-import android.widget.ImageView;
-
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.CharacterCardviewBinding;

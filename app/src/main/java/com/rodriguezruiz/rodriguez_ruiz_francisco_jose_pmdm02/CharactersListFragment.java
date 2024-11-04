@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.FragmentCharactersListBinding;
+import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.CharactersListFragmentBinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class CharactersListFragment extends Fragment {
 
-    private FragmentCharactersListBinding binding;
+    private CharactersListFragmentBinding binding;
     private ArrayList<CharacterData> characters; // Lista de juegos
     private CharacterRecyclerViewAdapter adapter;
 
@@ -26,7 +26,8 @@ public class CharactersListFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_characters_list, container, false);
+        binding = CharactersListFragmentBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
     @Override
