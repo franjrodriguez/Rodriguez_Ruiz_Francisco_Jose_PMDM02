@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="SplashTheme" parent="Theme.AppCompat.Light">
-        <item name="android:windowBackground">@drawable/marioyamigos</item>
+
+    <!-- Estilo para los títulos principales (con fuente VT323 y color azul) -->
+    <style name="TitleStyle">
+        <item name="android:fontFamily">@font/vt323regular</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/marioBlue</item>
     </style>
+
+    <!-- Estilo para los botones (colores de Super Mario y fuente VT323) -->
+    <style name="ButtonStyle">
+        <item name="android:fontFamily">@font/vt323regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:backgroundTint">@color/marioRed</item>
+        <item name="android:textColor">@color/marioYellow</item>
+    </style>
+
+    <!-- Estilo para los subtítulos o textos secundarios -->
+    <style name="SubtitleStyle">
+        <item name="android:fontFamily">@font/robotocondensed</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/marioGreen</item>
+    </style>
+
 </resources>

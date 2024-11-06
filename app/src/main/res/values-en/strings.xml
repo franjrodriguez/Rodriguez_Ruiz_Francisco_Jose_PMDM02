@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Rodriguez_Ruiz_Francisco_Jose_PMDM02</string>
+    <string name="title_app">Characters from the Saga</string>
+    <string name="detalle_personaje">Character Details</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="close">Close</string>
+    <string name="welcome">Welcome to Mario\'s World</string>
+    <string name="select">On a selected to </string>
+    <string name="about">About...</string>
+    <string name="copy">Created by Francisco José Rodríguez Ruiz</string>
+    <string name="version">Versión 1.0</string>
+
+    <!-- Mario -->
+    <string name="mario_name">Mario</string>
+    <string name="mario_description">The main hero, an Italian plumber.</string>
+    <string name="mario_skills">Jump, fire power</string>
+    <string name="mario_detail">Mario is known for his bravery, rescuing Princess Peach and facing Bowser.</string>
+
+    <!-- Luigi -->
+    <string name="luigi_name">Luigi</string>
+    <string name="luigi_description">Mario\'s brother, always ready to help.</string>
+    <string name="luigi_skills">High jump, fire power</string>
+    <string name="luigi_detail">Luigi is shyer than Mario, but he\'s skilled and always supports him.</string>
+
+    <!-- Princess Peach -->
+    <string name="peach_name">Princess Peach</string>
+    <string name="peach_description">The princess of the Mushroom Kingdom.</string>
+    <string name="peach_skills">Floating, magic</string>
+    <string name="peach_detail">Peach is kind, has magical abilities, and defends her kingdom.</string>
+
+    <!-- Bowser -->
+    <string name="bowser_name">Bowser</string>
+    <string name="bowser_description">The king of the Koopas and Mario\'s enemy.</string>
+    <string name="bowser_skills">Strength, fire resistance</string>
+    <string name="bowser_detail">Bowser is fierce and breathes fire. He constantly tries to kidnap Peach.</string>
+
+    <!-- Yoshi -->
+    <string name="yoshi_name">Yoshi</string>
+    <string name="yoshi_description">A green dinosaur and Mario\'s loyal friend.</string>
+    <string name="yoshi_skills">Long tongue, eating enemies</string>
+    <string name="yoshi_detail">Yoshi helps Mario by using his tongue to overcome obstacles.</string>
+
+    <!-- Toad -->
+    <string name="toad_name">Toad</string>
+    <string name="toad_description">A loyal servant of Princess Peach.</string>
+    <string name="toad_skills">Speed, endurance</string>
+    <string name="toad_detail">Toad is quick and brave, always protecting Peach\'s castle.</string>
+
+    <!-- Wario -->
+    <string name="wario_name">Wario</string>
+    <string name="wario_description">Mario\'s rival, ambitious and strong.</string>
+    <string name="wario_skills">Strength, resilience</string>
+    <string name="wario_detail">Wario is greedy, seeking power and riches, though he sometimes helps.</string>
+
+    <!-- Donkey Kong -->
+    <string name="donkey_kong_name">Donkey Kong</string>
+    <string name="donkey_kong_description">A strong gorilla and occasional ally of Mario.</string>
+    <string name="donkey_kong_skills">Brute strength</string>
+    <string name="donkey_kong_detail">Donkey Kong protects his island and family from external threats.</string>
+
+    <!-- Koopa Troopa -->
+    <string name="koopa_troopa_name">Koopa Troopa</string>
+    <string name="koopa_troopa_description">A loyal soldier in Bowser\'s army.</string>
+    <string name="koopa_troopa_skills">Endurance, can retreat into shell</string>
+    <string name="koopa_troopa_detail">Koopa Troopa is brave and fights for Bowser\'s kingdom.</string>
+
+    <!-- Goomba -->
+    <string name="goomba_name">Goomba</string>
+    <string name="goomba_description">A small enemy in the Mushroom Kingdom.</string>
+    <string name="goomba_skills">Persistence</string>
+    <string name="goomba_detail">Goomba is a simple creature, but always appears in Mario\'s adventures.</string>
+
+    <!-- Princess Daisy -->
+    <string name="daisy_name">Princess Daisy</string>
+    <string name="daisy_description">Princess of Sarasaland.</string>
+    <string name="daisy_skills">Sports abilities</string>
+    <string name="daisy_detail">Daisy is energetic, brave, and a great friend of Peach.</string>
+
+    <!-- Rosalina -->
+    <string name="rosalina_name">Rosalina</string>
+    <string name="rosalina_description">Guardian of the galaxies and friend of Mario.</string>
+    <string name="rosalina_skills">Gravity control</string>
+    <string name="rosalina_detail">Rosalina watches over the cosmos and helps Mario on space adventures.</string>
+
+    <!-- Toadette -->
+    <string name="toadette_name">Toadette</string>
+    <string name="toadette_description">Skilled friend of Toad.</string>
+    <string name="toadette_skills">Speed and teamwork</string>
+    <string name="toadette_detail">Toadette is cheerful and a great adventurer alongside Toad.</string>
+
+    <!-- Waluigi -->
+    <string name="waluigi_name">Waluigi</string>
+    <string name="waluigi_description">Wario\'s partner, expert at tennis.</string>
+    <string name="waluigi_skills">Skill, rivalry</string>
+    <string name="waluigi_detail">Waluigi is competitive and always looks to beat Luigi.</string>
+
+    <!-- Kamek -->
+    <string name="kamek_name">Kamek</string>
+    <string name="kamek_description">Bowser\'s trusted wizard.</string>
+    <string name="kamek_skills">Magic, teleportation</string>
+    <string name="kamek_detail">Kamek is clever and uses his magic to protect Bowser.</string>
+
+    <!-- Iconos -->
+    <string name="inicio">Home</string>
+    <string name="idioma">Language</string>
+    <string name="ajustes">Settings</string>
+    <string name="en_es">EN/ES</string>
+</resources>

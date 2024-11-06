@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.CharacterDetailFragmentBinding;
 
@@ -39,6 +40,10 @@ public class CharacterDetailFragment extends Fragment {
             String description = getArguments().getString("description");
             String detail = getArguments().getString("detail");
             String skills = getArguments().getString("skills");
+
+            // Mostramos mensaje usando un Toast
+            String message = "mensaje " + " " + name;
+            Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
 
             // Asignar los datos a los componentes
             binding.image.setImageResource(image);

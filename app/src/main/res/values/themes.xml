@@ -1,23 +1,27 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Rodriguez_Ruiz_Francisco_Jose_PMDM02" parent="Theme.Material3.DayNight">
-        <!-- Customize your light theme here. -->
-        <item name="colorPrimary">#E4000F</item>
-        <item name="colorPrimaryVariant">#B2000A</item>
-        <item name="colorSecondary">#00A2EE</item>
-        <item name="colorSecondaryVariant">#0079C2</item>
-        <item name="android:colorBackground">#F0E68C</item>
-        <item name="colorSurface">#E0D67C</item>
-        <item name="colorError">#FFD700</item>
-        <item name="android:textColorPrimary">#FFFFFF</item>
-        <item name="android:textColorSecondary">#FFFFFF</item>
+<resources>
 
-        <!-- Configuracion de la pantalla de Splash -->
-        <item name="android:windowSplashScreenAnimatedIcon">@drawable/marioyamigos</item>
-        <item name="android:windowSplashScreenAnimationDuration">1000</item>
-        <item name="android:windowSplashScreenIconBackgroundColor">@color/celeste</item>
-        <item name="android:windowSplashScreenBackground">@color/celeste</item>
-    </style>
+<!-- Tema principal de la app -->
+<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Colores principales -->
+    <item name="colorPrimary">@color/marioRed</item>
+    <item name="colorPrimaryDark">@color/marioBlue</item>
+    <item name="colorAccent">@color/marioYellow</item>
 
-    <style name="Theme.Rodriguez_Ruiz_Francisco_Jose_PMDM02" parent="Base.Theme.Rodriguez_Ruiz_Francisco_Jose_PMDM02" />
+    <!-- Fondo de la actividad -->
+    <item name="android:windowBackground">@color/skyBlue</item>
+
+    <!-- Fuente predeterminada para la app -->
+    <item name="android:fontFamily">@font/robotocondensed</item>
+
+    <!-- Personalización de la barra de herramientas -->
+    <item name="toolbarStyle">@style/ToolbarStyle</item>
+</style>
+
+<!-- Estilo para la Toolbar -->
+<style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
+    <item name="android:background">@color/marioRed</item>
+    <item name="android:titleTextColor">@color/marioYellow</item>
+    <item name="android:fontFamily">@font/vt323regular</item>
+</style>
+
 </resources>

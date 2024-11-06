@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.CharactersListFragmentBinding;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +41,10 @@ public class CharactersListFragment extends Fragment {
         adapter = new CharacterRecyclerViewAdapter(characters, getActivity());
         binding.charactersRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.charactersRecyclerview.setAdapter(adapter);
+
+        // Avisamos de que ya está todo preparado y cargado con un SnackBAr
+        String mensajeUsuario = getString(R.string.welcome);
+        Snackbar snackbar = Snackbar.make(view, mensajeUsuario, Snackbar.LENGTH_LONG);
     }
 
     private void loadCharacters() {

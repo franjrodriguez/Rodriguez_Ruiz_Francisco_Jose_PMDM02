@@ -3,6 +3,12 @@
     <string name="title_app">Personajes de la saga</string>
     <string name="detalle_personaje">Detalles de Personaje</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="close">Cerrar</string>
+    <string name="welcome">Bienvenidos al mundo de Mario</string>
+    <string name="select">Se ha seleccionado al personaje </string>
+    <string name="about">Acerca de…</string>
+    <string name="copy">Aplicacion creada por Francisco José Rodríguez Ruiz</string>
+    <string name="version">Versión 1.0</string>
 
     <!-- Mario -->
     <string name="mario_name">Mario</string>
@@ -93,5 +99,11 @@
     <string name="kamek_description">Mago de confianza de Bowser.</string>
     <string name="kamek_skills">Magia, teletransportación</string>
     <string name="kamek_detail">Kamek es astuto y usa su magia para proteger a Bowser.</string>
+
+    <!-- Iconos -->
+    <string name="inicio">Inicio</string>
+    <string name="idioma">Idioma</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="en_es">EN/ES</string>
 
 </resources>
