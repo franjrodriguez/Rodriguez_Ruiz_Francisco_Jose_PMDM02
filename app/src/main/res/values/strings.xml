@@ -2,7 +2,7 @@
     <string name="app_name">Rodriguez_Ruiz_Francisco_Jose_PMDM02</string>
     <string name="title_app">Personajes de la saga</string>
     <string name="detalle_personaje">Detalles de Personaje</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Fragmento Vacio</string>
     <string name="close">Cerrar</string>
     <string name="welcome">Bienvenidos al mundo de Mario</string>
     <string name="select">Se ha seleccionado al personaje </string>
@@ -104,6 +104,10 @@
     <string name="inicio">Inicio</string>
     <string name="idioma">Idioma</string>
     <string name="ajustes">Ajustes</string>
-    <string name="en_es">EN/ES</string>
+    <string name="en_es">Castellano / Inglés</string>
+    <string name="mario_y_amigos">Mario y Amigos</string>
+    <string name="open_nav_drawer">Abrir menu</string>
+    <string name="close_nav_drawer">Cerrar menu</string>
+    <string name="cambiar_idioma">Cambiar idioma:</string>
 
 </resources>

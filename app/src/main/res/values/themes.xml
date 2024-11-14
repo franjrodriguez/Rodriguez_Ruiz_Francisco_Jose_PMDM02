@@ -1,7 +1,7 @@
 <resources>
 
 <!-- Tema principal de la app -->
-<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+<style name="AppTheme" parent="Theme.Material3.DayNight">
     <!-- Colores principales -->
     <item name="colorPrimary">@color/marioRed</item>
     <item name="colorPrimaryDark">@color/marioBlue</item>
