@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="266dp"
-        android:layout_height="315dp"
+        android:layout_width="215dp"
+        android:layout_height="252dp"
         android:scaleType="centerInside"
         app:srcCompat="@drawable/image1" />
 
@@ -20,28 +20,28 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Mario"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textAppearance="@style/TitleStyleDetail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image" />
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="354dp"
-        android:layout_height="116dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:text="Descripcion"
+        android:textAppearance="@style/TextStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
         android:id="@+id/skills"
-        android:layout_width="357dp"
-        android:layout_height="126dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fortalezas"
+        android:textAppearance="@style/TextStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"

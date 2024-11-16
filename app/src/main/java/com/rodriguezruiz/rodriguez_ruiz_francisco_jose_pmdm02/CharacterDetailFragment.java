@@ -42,7 +42,7 @@ public class CharacterDetailFragment extends Fragment {
             String skills = getArguments().getString("skills");
 
             // Mostramos mensaje usando un Toast
-            String message = "mensaje " + " " + name;
+            String message = String.format("%s %s", getString(R.string.select), name);
             Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
 
             // Asignar los datos a los componentes

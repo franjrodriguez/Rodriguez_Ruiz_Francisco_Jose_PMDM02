@@ -3,14 +3,10 @@ package com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -19,7 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
-import androidx.navigation.NavHostController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
@@ -61,12 +57,30 @@ public class MainActivity extends AppCompatActivity {
         NavHostFragment navHostFragment = (NavHostFragment) fragmentManager.findFragmentById(R.id.nav_host_fragment);
         assert navHostFragment != null;
         navController = navHostFragment.getNavController();
+        // El siguiente metodo permite controlar cuando nos encontramos en un fragment permitir el regreso <--
+        navController.addOnDestinationChangedListener(this::onChangeView);
 
         // Configuracion del DrawLayout y el Toggle
         configToggleMenu();
 
         // Configuracion de la navegacion
         configNavigation();
+
+        // Configurar el icono del menu en la ActionBar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    private void onChangeView(NavController navController, NavDestination navDestination, Bundle bundle) {
+        // Usamos una operación lógica para indicarle que si nos encontramos en el fragment de Detalles o en el de Preferencias
+        // desactive y en caso contrario lo activa.
+        if (toggle == null) return;
+        if (navDestination.getId() == R.id.characterDetailFragment || navDestination.getId() != R.id.preferencesFragment) {
+            toggle.setDrawerIndicatorEnabled(false);
+        } else {
+            toggle.setDrawerIndicatorEnabled(true);
+        }
     }
 
     @Override
@@ -109,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (toggle.onOptionsItemSelected(item)) {
             return true;
         }

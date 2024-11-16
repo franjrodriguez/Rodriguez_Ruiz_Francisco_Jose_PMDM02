@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Rodriguez_Ruiz_Francisco_Jose_PMDM02</string>
     <string name="title_app">Personajes de la saga</string>
-    <string name="detalle_personaje">Detalles de Personaje</string>
+    <string name="detalle_personaje">Detalles de los Personajes</string>
     <string name="hello_blank_fragment">Fragmento Vacio</string>
     <string name="close">Cerrar</string>
     <string name="welcome">Bienvenidos al mundo de Mario</string>
-    <string name="select">Se ha seleccionado al personaje </string>
+    <string name="select">Personaje seleccionado: </string>
     <string name="about">Acerca de…</string>
     <string name="copyright">Aplicacion creada por Francisco José Rodríguez Ruiz</string>
     <string name="version">Versión 1.0</string>
