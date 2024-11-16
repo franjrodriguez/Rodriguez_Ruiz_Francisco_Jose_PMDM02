@@ -1,12 +1,16 @@
 package com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02;
-
+/**
+ * Actividad principal de la aplicación que gestiona la navegación, el menú lateral,
+ * las preferencias de idioma y la visualización de personajes.
+ * Esta actividad implementa un sistema de navegación basado en fragmentos con DrawerLayout
+ * y maneja las configuraciones de idioma a través de SharedPreferences.
+ */
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -25,19 +29,42 @@ import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.Activi
 
 import java.util.Locale;
 
+/**
+ * MainActivity actúa como el contenedor principal de la aplicación y coordina
+ * la navegación entre diferentes fragmentos y la gestión de la interfaz de usuario.
+ */
 public class MainActivity extends AppCompatActivity {
 
+    // Definición de cosntantes usadas en la app. Tambien serán usadas en CharacterDetailFragment.java
+    public static final String IMAGE_DETAIL = "imageDetail";
+    public static final String NAME = "name";
+    public static final String DESCRIPTION = "description";
+    public static final String SKILLS = "skills";
+    public static final String DETAIL = "detail";
+    public static final String LANGUAGE = "language";
+    public static final String LANGUAGE_DEFAULT = "es";
+
+    // Descripcion de los atributos de la clase:
+    //  - navController: Controlador de navegación para gestionar la misma entre fragmentos
+    //  - toggle: Permite controlar el menú lateral
+    //  - binding: Lleva a cabo la vinculación para acceder a las vistas de la activity
     private NavController navController;
     private ActionBarDrawerToggle toggle;
     private ActivityMainBinding binding;
 
+    /**
+     * Método llamado cuando se crea la actividad.
+     * Inicializa la interfaz de usuario, configura la navegación y establece el idioma.
+     *
+     * @param savedInstanceState Estado guardado de la instancia si está siendo recreada
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Proceder a cargar el idioma seleccionado en las SharedPreferences
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String languageCode = preferences.getString("language", "es");
+        String languageCode = preferences.getString(LANGUAGE, LANGUAGE_DEFAULT);
         setLocale(languageCode);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -72,24 +99,48 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Maneja los cambios de vista en la navegación.
+     * Controla la visibilidad del indicador del menú lateral según el fragmento actual.
+     *
+     * @param navController Controlador de navegación
+     * @param navDestination Destino de navegación actual
+     * @param bundle Argumentos adicionales de navegación
+     */
     private void onChangeView(NavController navController, NavDestination navDestination, Bundle bundle) {
-        // Usamos una operación lógica para indicarle que si nos encontramos en el fragment de Detalles o en el de Preferencias
+        // Usamos una condición para indicarle que si nos encontramos en el fragment de Detalles o en el de Preferencias
         // desactive y en caso contrario lo activa.
         if (toggle == null) return;
-        if (navDestination.getId() == R.id.characterDetailFragment || navDestination.getId() != R.id.preferencesFragment) {
-            toggle.setDrawerIndicatorEnabled(false);
-        } else {
+        if (navDestination.getId() == R.id.nav_host_fragment) {
             toggle.setDrawerIndicatorEnabled(true);
+        } else {
+            toggle.setDrawerIndicatorEnabled(false);
         }
+//        if (navDestination.getId() == R.id.characterDetailFragment) {
+//            toggle.setDrawerIndicatorEnabled(false);
+//        } else {
+//            toggle.setDrawerIndicatorEnabled(true);
+//        }
     }
 
+
+    /**
+     * Crea el menú de opciones en la barra de acción.
+     *
+     * @param menu El menú a crear
+     * @return true si el menú se creó correctamente
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.context_menu, menu);
         return true;
     }
 
-    // Implementar Idioma
+    /**
+     * Establece el idioma de la aplicación.
+     *
+     * @param languageCode Código del idioma a establecer (ejemplo: "es" para español)
+     */
     private void setLocale(String languageCode) {
         Locale locale = new Locale(languageCode);
         Locale.setDefault(locale);
@@ -98,13 +149,20 @@ public class MainActivity extends AppCompatActivity {
         getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
     }
 
-    // Metodos relacionados con la implementacion del NavigationDrawer.
+    /**
+     * Configura el toggle del menú lateral.
+     * Inicializa y sincroniza el ActionBarDrawerToggle con el DrawerLayout.
+     */
     private void configToggleMenu() {
         toggle = new ActionBarDrawerToggle(this, binding.drawerLayout, R.string.open_nav_drawer, R.string.close_nav_drawer);
         binding.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
     }
 
+    /**
+     * Configura la navegación del menú lateral.
+     * Establece los listeners para los elementos del menú y maneja la navegación.
+     */
     private void configNavigation() {
         NavigationUI.setupWithNavController(binding.navigationView, navController);
 
@@ -122,6 +180,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Maneja la selección de elementos del menú de opciones.
+     *
+     * @param item Elemento del menú seleccionado
+     * @return true si el evento fue manejado, false en caso contrario
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (toggle.onOptionsItemSelected(item)) {
@@ -133,6 +197,11 @@ public class MainActivity extends AppCompatActivity {
         }        return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Gestiona la navegación hacia atrás en la aplicación.
+     *
+     * @return true si la navegación fue manejada, false en caso contrario
+     */
     @Override
     public boolean onSupportNavigateUp() {
         Fragment navHostFragment = getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
@@ -144,19 +213,30 @@ public class MainActivity extends AppCompatActivity {
         return super.onSupportNavigateUp();
     }
 
+    /**
+     * Maneja el evento de clic en un personaje.
+     * Prepara y navega hacia el fragmento de detalle del personaje.
+     *
+     * @param characterData Datos del personaje seleccionado
+     * @param view Vista que generó el evento
+     */
     public void userClicked(CharacterData characterData, View view) {
 //        Log.i("franlog","Acabo de entrar en userClicked");
         Bundle bundle = new Bundle();
-        bundle.putInt("imageDetail", characterData.getImageDetailCharacter());
-        bundle.putString("name", characterData.getNameCharacter());
-        bundle.putString("description", characterData.getDescriptionCharacter());
-        bundle.putString("skills", characterData.getSkillsCharacter());
-        bundle.putString("detail", characterData.getDetailCharacter());
+        bundle.putInt(IMAGE_DETAIL, characterData.getImageDetailCharacter());
+        bundle.putString(NAME, characterData.getNameCharacter());
+        bundle.putString(DESCRIPTION, characterData.getDescriptionCharacter());
+        bundle.putString(SKILLS, characterData.getSkillsCharacter());
+        bundle.putString(DETAIL, characterData.getDetailCharacter());
 
         // Log.i("franlog", "Justo antes de navegar al fragment de detalle");
         Navigation.findNavController(view).navigate(R.id.characterDetailFragment, bundle);
     }
 
+    /**
+     * Muestra un diálogo con información sobre la aplicación.
+     * Incluye derechos de autor y versión de la aplicación.
+     */
     private void showAboutDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         String message = String.format("%s\n\n%s", getString(R.string.copyright), getString(R.string.version));
