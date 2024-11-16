@@ -7,7 +7,7 @@
     <string name="welcome">Welcome to Mario\'s World</string>
     <string name="select">On a selected to </string>
     <string name="about">About...</string>
-    <string name="copy">Created by Francisco José Rodríguez Ruiz</string>
+    <string name="copyright">Created by Francisco José Rodríguez Ruiz</string>
     <string name="version">Versión 1.0</string>
 
     <!-- Mario -->
@@ -104,9 +104,20 @@
     <string name="inicio">Home</string>
     <string name="idioma">Language</string>
     <string name="ajustes">Settings</string>
-    <string name="en_es">Spanish / English</string>
+    <string name="pref_title">Select language</string>
     <string name="mario_y_amigos">Mario and Friends</string>
     <string name="open_nav_drawer">Open menu</string>
     <string name="close_nav_drawer">Close menu</string>
-    <string name="cambiar_idioma">Change Language</string>
+    <string name="pref_summary">Select Spanish or English</string>
+    <string name="ok_button">Ok</string>
+
+    <!-- Array de String para las SharedPreferences del idioma -->
+    <string-array name="language">
+        <item>Spanish</item>
+        <item>English</item>
+    </string-array>
+    <string-array name="languagecode">
+        <item>es</item>
+        <item>en</item>
+    </string-array>
 </resources>

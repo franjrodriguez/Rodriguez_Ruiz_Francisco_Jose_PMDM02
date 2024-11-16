@@ -13,4 +13,8 @@
         android:id="@+id/mainFragment"
         android:name="com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.CharactersListFragment"
         android:label="mainFragment" />
+    <fragment
+        android:id="@+id/preferencesFragment"
+        android:name="com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.PreferencesFragment"
+        android:label="PreferencesFragment" />
 </navigation>

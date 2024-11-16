@@ -1,5 +1,7 @@
 package com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02;
 
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -13,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
@@ -20,8 +23,11 @@ import androidx.navigation.NavHostController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
+import androidx.preference.PreferenceManager;
 
 import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.ActivityMainBinding;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,8 +39,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Proceder a cargar el idioma seleccionado en las SharedPreferences
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String languageCode = preferences.getString("language", "es");
+        setLocale(languageCode);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Implementar Toolbar
+        Toolbar toolbar = binding.toolbar;
+        setSupportActionBar(toolbar);
+
+        // Configurar el icono del menu en la ActionBar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(R.string.title_app);
+        }
 
         // Obtener el NavController desde el NavHostFragment.
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -47,14 +67,24 @@ public class MainActivity extends AppCompatActivity {
 
         // Configuracion de la navegacion
         configNavigation();
-
-        // Configurar el icono del menu en la ActionBar
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-
     }
-    
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.context_menu, menu);
+        return true;
+    }
+
+    // Implementar Idioma
+    private void setLocale(String languageCode) {
+        Locale locale = new Locale(languageCode);
+        Locale.setDefault(locale);
+        Configuration configuration = new Configuration();
+        configuration.setLocale(locale);
+        getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
+    }
+
+    // Metodos relacionados con la implementacion del NavigationDrawer.
     private void configToggleMenu() {
         toggle = new ActionBarDrawerToggle(this, binding.drawerLayout, R.string.open_nav_drawer, R.string.close_nav_drawer);
         binding.drawerLayout.addDrawerListener(toggle);
@@ -66,21 +96,16 @@ public class MainActivity extends AppCompatActivity {
 
         // Manejar la selección de elementos del menú
         binding.navigationView.setNavigationItemSelectedListener(menuItem -> {
-            if (menuItem.getItemId() == R.id.nav_host_fragment) {
-                navController.navigate(R.id.nav_host_fragment); // Navegar al fragmento de inicio
+            int optionItem = menuItem.getItemId();
+            if (optionItem == R.id.nav_home) {
+                navController.navigate(R.id.drawer_layout); // Navegar al fragmento de inicio
+            } else if (optionItem == R.id.nav_language) {
+             //   Navigation.findNavController(this.getCurrentFocus()).navigate(R.id.preferencesFragment);
+                navController.navigate(R.id.preferencesFragment);
             }
             binding.drawerLayout.closeDrawers(); // Cerrar el menú
             return true;
         });
-
-//        // Maneja la opción de perfil del header del menú
-//        ImageView profileImageView = binding.navigationView.getHeaderView(0).findViewById(R.id.image_header);
-//
-//        profileImageView.setOnClickListener(v -> {
-//            navController.navigate(R.id.nav_language); // Navegar al fragmento de perfil
-//            binding.drawerLayout.closeDrawers(); // Cerrar el menú
-//        });
-
     }
 
     @Override
@@ -106,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void userClicked(CharacterData characterData, View view) {
-        Log.i("franlog","Acabo de entrar en userClicked");
+//        Log.i("franlog","Acabo de entrar en userClicked");
         Bundle bundle = new Bundle();
         bundle.putInt("imageDetail", characterData.getImageDetailCharacter());
         bundle.putString("name", characterData.getNameCharacter());
@@ -114,23 +139,18 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("skills", characterData.getSkillsCharacter());
         bundle.putString("detail", characterData.getDetailCharacter());
 
-        Log.i("franlog", "Justo antes de navegar al fragment de detalle");
+        // Log.i("franlog", "Justo antes de navegar al fragment de detalle");
         Navigation.findNavController(view).navigate(R.id.characterDetailFragment, bundle);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.context_menu, menu);
-        return true;
     }
 
     private void showAboutDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        String message = String.format("%s\n\n%s", getString(R.string.copyright), getString(R.string.version));
+
         builder.setTitle(R.string.about)
-                .setMessage(R.string.copy)
+                .setMessage(message)
                 .setIcon(R.drawable.smlogo)
-                .setPositiveButton("", (dialog, which) -> dialog.dismiss());
+                .setPositiveButton(R.string.ok_button, (dialog, which) -> dialog.dismiss());
         AlertDialog dialog = builder.create();
         dialog.show();
     }

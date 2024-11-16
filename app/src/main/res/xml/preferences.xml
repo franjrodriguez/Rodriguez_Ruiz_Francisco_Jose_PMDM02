@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <EditTextPreference
+    <ListPreference
         android:key="language"
-        android:title="Idioma"
-        android:summary="Permite seleccionar el idioma a mostrar entre inglés o castellano"
-        android:dialogTitle="Castellano / Inglés" />
+        android:title="@string/title_app"
+        android:summary="@string/pref_summary"
+        android:entries="@array/language"
+        android:entryValues="@array/languagecode"
+        android:defaultValue="es" />
 
 </androidx.preference.PreferenceScreen>

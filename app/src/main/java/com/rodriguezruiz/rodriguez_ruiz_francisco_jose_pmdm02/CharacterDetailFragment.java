@@ -30,11 +30,11 @@ public class CharacterDetailFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.i("fran", "Acabo de entrar al onViewCreated del fragment detalle");
+        //Log.i("fran", "Acabo de entrar al onViewCreated del fragment detalle");
 
         // Si hay argumentos los recuperamos
         if (getArguments() != null) {
-            Log.i("franlog", "Estamos tomando los datos pasados");
+            //Log.i("franlog", "Estamos tomando los datos pasados");
             int image = getArguments().getInt("imageDetail");
             String name = getArguments().getString("name");
             String description = getArguments().getString("description");

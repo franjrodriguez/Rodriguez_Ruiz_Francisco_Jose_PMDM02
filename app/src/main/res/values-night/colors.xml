@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="skyBlue">#121212</color> <!-- Fondo oscuro -->
+    <color name="marioRed">#8B0000</color> <!-- Rojo oscuro -->
+    <color name="marioBlue">#0B3D91</color> <!-- Azul marino profundo -->
+    <color name="marioYellow">#FFCC00</color> <!-- Amarillo cálido -->
+    <color name="white">#E0E0E0</color> <!-- Gris claro -->
+</resources>

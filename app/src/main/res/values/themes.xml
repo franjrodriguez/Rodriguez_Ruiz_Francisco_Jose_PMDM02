@@ -2,6 +2,17 @@
 
 <!-- Tema principal de la app -->
 <style name="AppTheme" parent="Theme.Material3.DayNight">
+
+    <!-- Deshabilitar la ACtionBar que Android aporta por defecto -->
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+
+    <!-- Configuracion de la pantalla de Splash -->
+    <item name="android:windowSplashScreenBackground">@color/skyBlue</item>
+    <item name="android:windowSplashScreenAnimatedIcon">@drawable/marioyamigos</item>
+    <item name="android:windowSplashScreenAnimationDuration">2000</item>
+    <item name="android:windowSplashScreenIconBackgroundColor">@color/white</item>
+
     <!-- Colores principales -->
     <item name="colorPrimary">@color/marioRed</item>
     <item name="colorPrimaryDark">@color/marioBlue</item>
