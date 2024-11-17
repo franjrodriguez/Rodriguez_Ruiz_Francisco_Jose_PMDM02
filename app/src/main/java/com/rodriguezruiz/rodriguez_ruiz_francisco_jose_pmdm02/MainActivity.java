@@ -125,6 +125,13 @@ public class MainActivity extends AppCompatActivity {
         updateToggleState(navDestination.getId());
     }
 
+    /**
+     * Actualiza el estado del toggle y del drawer basado en el ID del destino actual.
+     * Determina si debe mostrar el icono del drawer o la flecha de retorno, y si el drawer
+     * debe estar bloqueado o no.
+     *
+     * @param destinationId El ID del destino de navegación actual
+     */
     private void updateToggleState(int destinationID) {
         boolean isSecondaryFragment = (
                 destinationID == R.id.characterDetailFragment ||
@@ -138,6 +145,15 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
+    /**
+     * Se llama después de que la actividad ha sido resumida.
+     * Asegura que el estado del toggle esté sincronizado con el estado actual de navegación,
+     * especialmente importante después de recrear la actividad.
+     * Nota Adicional: El principal motivo por el que se añade este método es porque al entrar en el fragment
+     *      preferencesFragment y llevar a cabo un cambio de idioma, en el momento en que se
+     *      ejecuta el requireActivity().recreate() para recargar con el nuevo idioma, se mantenía el indicador
+     *      por defecto del navigationdrawer (3 rayas) en lugar de la flecha para regresar a la mainActivity.
+     */
     protected void onPostResume() {
         super.onPostResume();
         if (toggle != null) {
