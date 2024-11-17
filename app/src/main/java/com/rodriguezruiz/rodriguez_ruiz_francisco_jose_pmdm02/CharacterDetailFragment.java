@@ -23,6 +23,7 @@ import com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02.databinding.Charac
 public class CharacterDetailFragment extends Fragment {
 
     // Definición de constantes que fueron usadas en el MainActivity.java
+    // para el paso de los datos del Bundle.
     public static final String IMAGE_DETAIL = "imageDetail";
     public static final String NAME = "name";
     public static final String DESCRIPTION = "description";

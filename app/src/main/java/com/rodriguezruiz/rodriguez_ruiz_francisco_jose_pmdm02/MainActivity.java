@@ -8,6 +8,7 @@ package com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
@@ -89,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Configuracion del DrawLayout y el Toggle
         configToggleMenu();
+        toggle.setDrawerIndicatorEnabled(true);
 
         // Configuracion de la navegacion
         configNavigation();
@@ -108,21 +111,44 @@ public class MainActivity extends AppCompatActivity {
      * @param bundle Argumentos adicionales de navegación
      */
     private void onChangeView(NavController navController, NavDestination navDestination, Bundle bundle) {
-        // Usamos una condición para indicarle que si nos encontramos en el fragment de Detalles o en el de Preferencias
-        // desactive y en caso contrario lo activa.
-        if (toggle == null) return;
-        if (navDestination.getId() == R.id.nav_host_fragment) {
-            toggle.setDrawerIndicatorEnabled(true);
-        } else {
-            toggle.setDrawerIndicatorEnabled(false);
+        // Lo primero que hacemos es verificar que toggle no está a null, en cuyo caso lanzamos configToggleMenu()
+        // para que lo cree.
+        if (toggle == null) {
+            configToggleMenu();
         }
-//        if (navDestination.getId() == R.id.characterDetailFragment) {
-//            toggle.setDrawerIndicatorEnabled(false);
-//        } else {
-//            toggle.setDrawerIndicatorEnabled(true);
-//        }
+        // Ahora verificamos si nos encontramos en una actividad secundaria o estamos en la main
+        // con la intención de eliminar el indicador del navigationdrawer y que aparezca la flecha de navegacion
+        // para retornar al main o no, respectivamente.
+        // En nuestro caso las dos actividades que tnemos que considerar es:
+        //  - characterDetailFragment
+        //  - preferencesFragment
+        updateToggleState(navDestination.getId());
     }
 
+    private void updateToggleState(int destinationID) {
+        boolean isSecondaryFragment = (
+                destinationID == R.id.characterDetailFragment ||
+                destinationID == R.id.preferencesFragment
+        );
+        toggle.setDrawerIndicatorEnabled(!isSecondaryFragment);
+        binding.drawerLayout.setDrawerLockMode(
+                isSecondaryFragment ?
+                        DrawerLayout.LOCK_MODE_LOCKED_CLOSED :
+                        DrawerLayout.LOCK_MODE_UNLOCKED
+        );
+    }
+
+    protected void onPostResume() {
+        super.onPostResume();
+        if (toggle != null) {
+            toggle.syncState();
+            // Verificar el estado actual del navigation
+            NavDestination navDestination = navController.getCurrentDestination();
+            if (navDestination != null) {
+                updateToggleState(navDestination.getId());
+            }
+        }
+    }
 
     /**
      * Crea el menú de opciones en la barra de acción.
@@ -169,10 +195,9 @@ public class MainActivity extends AppCompatActivity {
         // Manejar la selección de elementos del menú
         binding.navigationView.setNavigationItemSelectedListener(menuItem -> {
             int optionItem = menuItem.getItemId();
-            if (optionItem == R.id.nav_home) {
-                navController.navigate(R.id.drawer_layout); // Navegar al fragmento de inicio
+            if (optionItem == R.id.mainFragment) {
+                navController.navigate(R.id.nav_host_fragment); // Navegar al fragmento de inicio
             } else if (optionItem == R.id.nav_language) {
-             //   Navigation.findNavController(this.getCurrentFocus()).navigate(R.id.preferencesFragment);
                 navController.navigate(R.id.preferencesFragment);
             }
             binding.drawerLayout.closeDrawers(); // Cerrar el menú
