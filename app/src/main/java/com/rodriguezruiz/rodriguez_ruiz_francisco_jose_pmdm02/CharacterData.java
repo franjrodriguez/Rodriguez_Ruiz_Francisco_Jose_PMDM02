@@ -38,6 +38,7 @@ public class CharacterData {
         this.nameCharacter = nameCharacter;
         this.descriptionCharacter = descriptionCharacter;
         this.skillsCharacter = skillsCharacter;
+        this.detailCharacter = detailCharacter;
     }
 
     // Getters de cada atributo de la clase

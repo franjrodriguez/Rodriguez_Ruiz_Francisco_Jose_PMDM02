@@ -1,47 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- Estilo para los títulos principales (con fuente VT323 y color azul) -->
-    <style name="TitleStyle">
-        <item name="android:fontFamily">@font/vt323regular</item>
-        <item name="android:textSize">24dp</item>
-        <item name="android:textColor">@color/marioBlue</item>
-    </style>
-
-    <style name="TitleStyleDetail">
-        <item name="android:fontFamily">@font/vt323regular</item>
-        <item name="android:textSize">30dp</item>
-        <item name="android:textColor">@color/marioBlue</item>
-    </style>
-
-    <!-- Estilo para los subtítulos o textos secundarios -->
-    <style name="SubtitleStyle">
-        <item name="android:fontFamily">@font/robotocondensed</item>
-        <item name="android:textSize">18dp</item>
-        <item name="android:textColor">@color/marioGreen</item>
-    </style>
-
-    <!-- Estilo para los textos  -->
-    <style name="TextStyle">
-        <item name="android:fontFamily">@font/robotocondensed</item>
-        <item name="android:textSize">16dp</item>
-        <item name="android:textColor">@color/black</item>
-    </style>
-
-    <!-- Estilo para los textos  remarcados en negrita -->
-    <style name="TextStyleBold">
-        <item name="android:fontFamily">@font/robotocondensed</item>
+    <!-- Titulo (Nombre del personaje en detalles) -->
+    <style name="title">
+        <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/marioBlue</item>
+    </style>
+    <!-- Subtitulo (habilidades y más detalles y para el cardview->nombre) -->
+    <style name="subTitle">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/marioBlue</item>
+    </style>
+    <!-- Normal (contenidos habilidades, breve descripcion y mas detalles) -->
+    <style name="normal">
+        <item name="android:textSize">14dp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <!-- Estilo para los botones (colores de Super Mario y fuente VT323) -->
-    <style name="ButtonStyle">
-        <item name="android:fontFamily">@font/vt323regular</item>
+    <!-- Titulo del menu de navegacion -->
+    <style name="titleMenu">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Subtitulo del menu de navegacion  -->
+    <style name="subTitleMenu">
         <item name="android:textSize">18dp</item>
-        <item name="android:backgroundTint">@color/marioRed</item>
-        <item name="android:textColor">@color/marioYellow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/marioRed</item>
     </style>
 
 </resources>

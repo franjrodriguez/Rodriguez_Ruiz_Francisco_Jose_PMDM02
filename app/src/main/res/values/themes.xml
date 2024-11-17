@@ -32,7 +32,7 @@
 <style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
     <item name="android:background">@color/marioRed</item>
     <item name="android:titleTextColor">@color/marioYellow</item>
-    <item name="android:fontFamily">@font/vt323regular</item>
+    <item name="android:textSize">16sp</item>
 </style>
 
 </resources>

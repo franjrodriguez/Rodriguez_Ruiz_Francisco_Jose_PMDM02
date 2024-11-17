@@ -81,6 +81,7 @@ public class CharacterDetailFragment extends Fragment {
             binding.name.setText(name);
             binding.description.setText(description);
             binding.skills.setText(skills);
+            binding.details.setText(detail);
         } else {
             Log.i("franlog", "OJITO!!! NO SE HAN PASADO DATOS");
         }

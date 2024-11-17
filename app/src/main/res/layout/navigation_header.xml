@@ -6,30 +6,30 @@
     android:padding="16dp">
 
     <ImageView
+        android:id="@+id/image_header"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:id="@+id/image_header"
         android:layout_gravity="center"
         android:contentDescription="@string/mario_y_amigos"
         android:src="@drawable/marioyamigos" />
 
     <TextView
+        android:id="@+id/title_header"
+        style="@style/subTitleMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/title_header"
-        android:text="@string/title_app"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        style="@style/SubtitleStyle"
-        android:layout_marginBottom="5dp" />
+        android:layout_marginBottom="5dp"
+        android:text="@string/title_app" />
 
     <TextView
+        android:id="@+id/subtitle_header"
+        style="@style/titleMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/subtitle_header"
-        android:text="NavigationDrawer"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
-        style="@style/TitleStyle"/>
+        android:text="Opciones de navegación" />
 
 </LinearLayout>

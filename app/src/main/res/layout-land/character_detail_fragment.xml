@@ -1,47 +1,99 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
+    <!-- Panel izquierdo - Imagen -->
     <ImageView
         android:id="@+id/image"
-        android:layout_width="201dp"
-        android:layout_height="322dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="18dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
         android:scaleType="centerInside"
-        app:srcCompat="@drawable/image1" />
+        tools:src="@drawable/image1" />
 
+    <!-- Panel derecho - Información -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical">
 
+        <!-- Nombre del personaje -->
         <TextView
             android:id="@+id/name"
+            style="@style/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Mario"
-            android:textAppearance="@style/TitleStyleDetail"/>
+            android:layout_marginTop="16dp"
+            tools:text="Mario" />
 
-        <TextView
-            android:id="@+id/description"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="TextView"
-            android:textAppearance="@style/TextStyle"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/skills"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="TextView"
-            android:textAppearance="@style/TextStyle"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Descripción breve -->
+                <TextView
+                    android:id="@+id/description"
+                    style="@style/normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_card"
+                    android:padding="12dp"
+                    tools:text="Breve descripcion" />
+
+                <!-- Título de habilidades -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/skills"
+                    style="@style/subTitle" />
+
+                <!-- Lista de habilidades -->
+                <TextView
+                    android:id="@+id/skills"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/background_card"
+                    android:padding="12dp"
+                    style="@style/normal"
+                    tools:text="Habilidades" />
+
+                <!-- Título de descripción detallada -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/m_s_detalles"
+                    style="@style/subTitle" />
+
+                <!-- Descripción detallada -->
+                <TextView
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/background_card"
+                    android:padding="12dp"
+                    style="@style/normal"
+                    tools:text="detalles" />
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-
 </LinearLayout>
