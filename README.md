@@ -24,7 +24,7 @@ Está estructurada bajo una arquitectura modular basada en *Fragments*, *Recycle
 ---
 
 ## 🧱 **Arquitectura del Proyecto**
-
+```text
 📦 com.rodriguezruiz.rodriguez_ruiz_francisco_jose_pmdm02
 ┣ 📜 MainActivity.java → Control principal de la app (UI, navegación y locale)
 ┣ 📜 CharactersListFragment.java → Muestra la lista de personajes
@@ -33,7 +33,7 @@ Está estructurada bajo una arquitectura modular basada en *Fragments*, *Recycle
 ┣ 📜 CharacterViewHolder.java → Gestiona vistas individuales del RecyclerView
 ┣ 📜 CharacterData.java → Modelo de datos de los personajes
 ┗ 📜 PreferencesFragment.java → Configuración y preferencias del usuario
-
+```
 ---
 
 ## 🧭 **Navegación y Flujo de la App**
