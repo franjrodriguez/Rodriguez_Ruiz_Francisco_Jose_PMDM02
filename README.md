@@ -67,31 +67,31 @@ git clone https://github.com/franjrodriguez/Rodriguez_Ruiz_Francisco_Jose_PMDM02
 
 4. Ejecuta la aplicación en un emulador o dispositivo físico Android (API 24+).
 
-   
+  
 
-   📸 **Capturas de Pantalla (opcional)**
-   Añade aquí imágenes de las pantallas principales: lista, detalle y ajustes.
-
-   
-
-   💡 **Decisiones Técnicas Destacadas**
-   Implementación del cambio de idioma persistente con SharedPreferences + recreate().
-   Control del DrawerLayout mediante ActionBarDrawerToggle adaptativo según fragment.
-   Uso del patrón ViewHolder para mejorar rendimiento del RecyclerView.
-   Modularidad total de la interfaz a través de fragments reutilizables.
+📸 **Capturas de Pantalla (opcional)**
+Añade aquí imágenes de las pantallas principales: lista, detalle y ajustes.
 
    
 
-   🔮 **Posibles Mejoras Futuras**
-   Integración de una base de datos local (Room).
-   Carga dinámica de personajes desde API REST.
-   Inclusión de animaciones entre fragmentos.
-   Diseño adaptativo con Jetpack Compose.
+💡 **Decisiones Técnicas Destacadas**
+Implementación del cambio de idioma persistente con SharedPreferences + recreate().
+Control del DrawerLayout mediante ActionBarDrawerToggle adaptativo según fragment.
+Uso del patrón ViewHolder para mejorar rendimiento del RecyclerView.
+Modularidad total de la interfaz a través de fragments reutilizables.
 
    
 
-   👤 Autor
-   Francisco José Rodríguez Ruiz
-   💼 Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM)
-   📍 Guadix, España
-   “Cada línea de código es una oportunidad de aprender algo nuevo.”
+🔮 **Posibles Mejoras Futuras**
+Integración de una base de datos local (Room).
+Carga dinámica de personajes desde API REST.
+Inclusión de animaciones entre fragmentos.
+Diseño adaptativo con Jetpack Compose.
+
+   
+
+|  👤 Autor
+|   Francisco José Rodríguez Ruiz
+|   💼 Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM)
+|   📍 Guadix, España
+|   “Cada línea de código es una oportunidad de aprender algo nuevo.”
