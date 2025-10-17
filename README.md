@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="./screenshot/banner.png" alt="Pokemon API Banner" width="85%">
+</p>
+
+
 # 📱 Proyecto Android - Gestión de Personajes (PMDM02)
 
 Este proyecto forma parte del módulo **Programación Multimedia y de Dispositivos Móviles (PMDM02)** del ciclo **Desarrollo de Aplicaciones Multiplataforma (DAM)**.  
